@@ -1,6 +1,6 @@
 import UnoTemplate from "./template/unoTemplate";
-import databaseUrl from "../../config";
 
+import { databaseUrl } from "../../config";
 import React, { useRef, useState, useEffect } from "react";
 
 export default function BenderyUNO() {

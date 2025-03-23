@@ -6,7 +6,6 @@ import { Formik } from "formik";
 import { supportSchema } from "../../../hooks/dataTools";
 import { PostData } from "../../../hooks/fetchData";
 import { databaseUrl } from "../../../config";
-
 export default function MainPageForm() {
   return (
     <article className="form-section" id="form">
