@@ -56,7 +56,7 @@ export default function MainSlider() {
 
                       <img
                         src={
-                          "http://192.168.100.12:1337" +
+                          databaseUrl +
                           itm.attributes.MainSliderImg.data[0].attributes.url
                         }
                         alt="slide"
