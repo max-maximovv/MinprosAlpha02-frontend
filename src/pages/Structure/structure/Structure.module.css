@@ -1,0 +1,50 @@
+.structure {
+  background-image: url(../../../../public/imgs/backgrounds/bg-white.png);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.structure h2,
+h1 {
+  text-align: center;
+}
+.structureTitle {
+  margin-top: 120px;
+  font-size: 58px;
+  text-transform: uppercase;
+  color: #0f1d89;
+  transform: scaleY(0.9);
+  transform-origin: 0 0;
+}
+.structureHead {
+  display: flex;
+  gap: 60px;
+}
+.slider {
+  max-width: 1600px;
+  width: 100%;
+}
+@media (max-width: 1390px) {
+  .slider {
+    max-width: 1000px;
+  }
+  .structureHead {
+    gap: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .slider {
+    max-width: 720px;
+  }
+}
+@media (max-width: 780px) {
+  .slider {
+    max-width: 400px;
+  }
+}
+@media (max-width: 520px) {
+  .structureTitle {
+    font-size: 32px;
+  }
+}

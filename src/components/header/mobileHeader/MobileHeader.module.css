@@ -1,0 +1,114 @@
+.MobileHeader {
+  width: 100%;
+  height: 100px;
+  background-color: #0f1d89;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.navbar {
+  max-width: 1150px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logotype {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-left: 5px;
+}
+.logotype img {
+  width: 14%;
+}
+.logoText {
+  width: 100%;
+  min-width: 400px;
+}
+.logoH {
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 8px;
+}
+.logoHM {
+  margin-top: 0;
+  font-size: 14px;
+}
+.headerItems {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+}
+.headerItems img {
+  width: 100%;
+}
+.headerItems a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+@media (min-width: 1150px) {
+  .logotype img {
+    width: 100px;
+  }
+  .navbar {
+    max-width: 2560px;
+  }
+}
+@media (max-width: 1280px) {
+  .dropdown button {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1150px) {
+  .logotype img {
+    width: 70px;
+  }
+}
+@media (max-width: 800px) {
+  .logotype {
+    padding-left: 10px;
+  }
+  .logotype img {
+    width: 10%;
+  }
+  .logo-text {
+    min-width: 300px;
+  }
+  .logoH {
+    font-size: 14px;
+  }
+  .logoHM {
+    font-size: 10px;
+  }
+}
+@media (max-width: 520px) {
+  .logotype {
+    padding-left: 10px;
+    width: 80px;
+    height: auto;
+  }
+  .logotype img {
+    width: 100%;
+  }
+  .logo-text {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .logoH {
+    display: none;
+  }
+  .logoHM {
+    display: none;
+  }
+}

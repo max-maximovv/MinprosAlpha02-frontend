@@ -1,0 +1,21 @@
+.dropdown button {
+  height: 100%;
+  color: white;
+  text-align: start;
+  padding: 0 8px 0 8px !important;
+}
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  background-color: #0f1d89 !important;
+}
+.header-link {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  top: 0;
+  bottom: 0;
+}
+@media (max-width: 1150px) {
+  .dropdown button {
+    padding: 8px !important;
+  }
+}
