@@ -9,13 +9,13 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
+import { databaseUrl } from "../../../config";
 export default function MainSlider() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const myData = getData(
-      "http://192.168.100.12:1337/api/glavnaya-straniczas?fields[0]=MainSliderTitle&fields[1]=MainSliderText&populate[MainSliderImg][fields][0]=name&populate[MainSliderImg][fields][1]=url"
+      `${databaseUrl}/api/glavnaya-straniczas?fields[0]=MainSliderTitle&fields[1]=MainSliderText&populate[MainSliderImg][fields][0]=name&populate[MainSliderImg][fields][1]=url`
     ).then((res) => {
       let newData = res.data.slice(-6);
       setData(newData);

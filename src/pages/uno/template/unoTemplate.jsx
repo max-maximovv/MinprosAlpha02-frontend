@@ -4,7 +4,7 @@ import "./bullets.css";
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { getData } from "../../../hooks/fetchData";
-
+import { databaseUrl } from "../../../config";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -128,7 +128,7 @@ export default function UnoTemplate(props) {
           </div>
         </div>
 
-        <img src={"http://192.168.100.12:1337" + props.SlideUrl} alt="slide" />
+        <img src={databaseUrl + props.SlideUrl} alt="slide" />
       </div>
     );
   };

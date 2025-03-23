@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import styles from "./Cyclogram.module.css";
 import "./cyclogram.css";
-
+import { databaseUrl } from "../../../config";
 export default function Cyclogram() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [dayInfo, setDayInfo] = useState(null);
@@ -57,7 +57,7 @@ export default function Cyclogram() {
     if (selectedDate) {
       setLoading(true);
       fetch(
-        `http://192.168.100.12:1337/api/cyclograms?filters[date][$eq]=${selectedDate}&populate=records`
+        `${databaseUrl}/api/cyclograms?filters[date][$eq]=${selectedDate}&populate=records`
       )
         .then((res) => res.json())
         .then((data) => {

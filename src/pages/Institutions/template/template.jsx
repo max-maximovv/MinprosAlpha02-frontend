@@ -7,12 +7,12 @@ import rehypeRaw from "rehype-raw";
 
 import styles from "./template.module.css";
 
+import { databaseUrl } from "../../../config";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
-
-import BlueBlock from "../../../components/blue-50-50-block/blue-block";
 
 export default function InstTemplate(props) {
   const [data, setData] = useState(null);
@@ -55,7 +55,7 @@ export default function InstTemplate(props) {
               <SwiperSlide>
                 <img
                   src={
-                    "http://192.168.100.12:1337" +
+                    databaseUrl +
                     data[0].attributes.SliderImg1.data[0].attributes.url
                   }
                 />
@@ -63,7 +63,7 @@ export default function InstTemplate(props) {
               <SwiperSlide>
                 <img
                   src={
-                    "http://192.168.100.12:1337" +
+                    databaseUrl +
                     data[0].attributes.SliderImg2.data[0].attributes.url
                   }
                 />
@@ -71,7 +71,7 @@ export default function InstTemplate(props) {
               <SwiperSlide>
                 <img
                   src={
-                    "http://192.168.100.12:1337" +
+                    databaseUrl +
                     data[0].attributes.SliderImg3.data[0].attributes.url
                   }
                 />
@@ -104,7 +104,7 @@ export default function InstTemplate(props) {
               <img
                 className={styles.itemLogotype}
                 src={
-                  "http://192.168.100.12:1337" +
+                  databaseUrl +
                   data[0].attributes.Logotype.data[0].attributes.url
                 }
               />
@@ -187,7 +187,7 @@ export default function InstTemplate(props) {
           <div className={styles.supervisionImg}>
             <img
               src={
-                "http://192.168.100.12:1337" +
+                databaseUrl +
                 data[0].attributes.SupervisorImg.data[0].attributes.url
               }
             />

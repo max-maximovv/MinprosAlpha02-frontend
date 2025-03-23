@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { Navigation } from "swiper/modules";
-
+import { databaseUrl } from "../../../config";
 import styles from "./template.module.css";
 
 export default function ManageTemplate(props) {
@@ -11,7 +11,7 @@ export default function ManageTemplate(props) {
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch(
-      "http://192.168.100.12:1337/api/managements?filters[id][$eq]=1&populate[sliderImgs][fields][0]=url&populate[activityImg][fields]=url"
+      `${databaseUrl}/api/managements?filters[id][$eq]=1&populate[sliderImgs][fields][0]=url&populate[activityImg][fields]=url`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -19,7 +19,7 @@ export default function ManageTemplate(props) {
 
         const imageData = data.data[0].attributes.sliderImgs.data || [];
         const fullUrls = imageData.map(
-          (img) => `http://192.168.100.12:1337${img.attributes.url}`
+          (img) => `${databaseUrl}${img.attributes.url}`
         );
         setData(attributes);
         setImages(fullUrls);

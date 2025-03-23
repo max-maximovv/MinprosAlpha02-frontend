@@ -1,10 +1,9 @@
 import React from "react";
 import InstTemplate from "./template/template";
 import styles from "./template/template.module.css";
-
+import { databaseUrl } from "../../config";
 export default function Slobodzeya() {
-  const database =
-    "http://192.168.100.12:1337/api/institutions?filters[id][$eq]=2&populate[SliderImg1][fields]=url&populate[SliderImg2][fields]=url&populate[SliderImg3][fields]=url&populate[SupervisorImg][fields]=url&populate[Logotype][fields]=url";
+  const database = `${databaseUrl}/api/institutions?filters[id][$eq]=2&populate[SliderImg1][fields]=url&populate[SliderImg2][fields]=url&populate[SliderImg3][fields]=url&populate[SupervisorImg][fields]=url&populate[Logotype][fields]=url`;
 
   const Information = () => {
     return (

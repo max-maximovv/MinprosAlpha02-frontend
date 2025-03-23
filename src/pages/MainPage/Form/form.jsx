@@ -5,6 +5,7 @@ import { Formik } from "formik";
 
 import { supportSchema } from "../../../hooks/dataTools";
 import { PostData } from "../../../hooks/fetchData";
+import { databaseUrl } from "../../../config";
 
 export default function MainPageForm() {
   return (
@@ -27,7 +28,7 @@ export default function MainPageForm() {
                 text: values.text,
               },
             };
-            PostData("http://localhost:1337/api/main-page-forms", data);
+            PostData(`${databaseUrl}/api/main-page-forms`, data);
             values.name = "";
             values.phone = "";
             values.email = "";
