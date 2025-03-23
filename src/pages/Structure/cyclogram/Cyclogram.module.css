@@ -1,0 +1,104 @@
+.cyclogram {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+}
+.calendar {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f1d89;
+}
+.calendar h2 {
+  font-size: 36px;
+  color: white;
+  text-align: center;
+}
+.calendarContainer {
+  max-width: 500px;
+}
+.infoBlock {
+  width: 50%;
+  display: flex;
+  background-color: white;
+  background-image: url(../../../../public/imgs/backgrounds/bg-white-cut.png);
+  background-size: cover;
+}
+.day {
+  font-size: 42px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.infoBlock span {
+  text-transform: uppercase;
+  color: red;
+}
+.infoBlock ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+.margin {
+  margin-left: 40px;
+}
+.infoItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.infoItemTime {
+  color: red;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 90%;
+
+  text-align: end;
+}
+.infoItemText {
+  padding-left: 5px;
+  margin-bottom: 0;
+}
+.infoItemPlace {
+  font-size: 18px;
+  margin-top: 0;
+}
+.wall {
+  width: 4px;
+  height: 80px;
+  background-color: #0f1d89;
+  border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
+  .calendar h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 900px) {
+  .cyclogram {
+    display: block;
+  }
+  .calendar {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .infoBlock {
+    width: 100%;
+    min-height: 500px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 430px) {
+  .day {
+    font-size: 30px;
+  }
+  .infoItemTime {
+    font-size: 26px;
+  }
+  .infoItemPlace {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}

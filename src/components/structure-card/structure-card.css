@@ -1,0 +1,88 @@
+.structure-card {
+  width: 330px;
+  height: 530px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.structure-card-a {
+  display: flex;
+  justify-content: center;
+}
+.structure-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.structure-card-text {
+  width: 100%;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.structure-card-p,
+h6 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.structure-card-p {
+  text-decoration: none;
+  color: #fff;
+  padding-top: 20px;
+  letter-spacing: 1px;
+  line-height: 100%;
+  transform: scaleY(0.9);
+  transform-origin: 0 0;
+}
+.structure-card-p::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.structure-card-text h6 {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1390px) {
+  .structure-card-p,
+  h6 {
+    font-size: 18px;
+  }
+  .structure-card {
+    width: 220px;
+    height: 350px;
+  }
+}
+@media (max-width: 780px) {
+  .structure-card-p,
+  h6 {
+    font-size: 22px;
+  }
+  .structure-card {
+    width: 300px;
+    height: 450px;
+  }
+  .structure-card-text {
+    height: 150px;
+  }
+}
+@media (max-width: 390px) {
+  .structure-card-p,
+  h6 {
+    font-size: 18px;
+  }
+  .structure-card {
+    width: 220px;
+    height: 350px;
+  }
+  .structure-card-text {
+    height: 120px;
+  }
+}
