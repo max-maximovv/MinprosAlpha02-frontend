@@ -53,7 +53,7 @@ export default function ResultsSlider() {
                     </div>
                     <img
                       src={
-                        "http://192.168.100.12:1337" +
+                        databaseUrl +
                         resItm.attributes.SecondSliderImg.data[0].attributes.url
                       }
                       alt="resSlide"
