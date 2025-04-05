@@ -1,6 +1,5 @@
 .contacts {
   background-image: url("/public/imgs/backgrounds/bg-white.png");
-  background-position: center end;
   background-size: cover;
   width: 100%;
   min-height: 360px;
@@ -9,7 +8,7 @@
   align-items: center;
 }
 .contacts img {
-  width: 400px;
+  width: 300px;
   height: auto;
   margin-top: 0;
 }
@@ -29,11 +28,7 @@
   margin-top: 0;
   color: black;
 }
-@media (max-width: 1280px) {
-  .contacts img {
-    width: 300px;
-  }
-}
+
 @media (max-width: 920px) {
   .contacts {
     min-height: 280px;

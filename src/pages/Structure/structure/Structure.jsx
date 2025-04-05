@@ -40,60 +40,6 @@ export default function Structure() {
             link="biography"
           />
         </div>
-        <h2>ГЛАВНОЕ УПРАВЛЕНИЕ НАУКИ И ИННОВАЦИОННОЙ ДЕЯТЕЛЬНОСТИ</h2>
-        {dimensions.width > 780 ? (
-          <div className={styles.structureHead}>
-            <StructureCard
-              img="/imgs/structure/1.webp"
-              name="Управление профессионального образования, инновационной деятельности и науки"
-              link=""
-            />
-            <StructureCard
-              img="/imgs/structure/2.webp"
-              name="Управление инспектирования, аттестации и мониторинга системы образования"
-              link=""
-            />
-            <StructureCard
-              img="/imgs/structure/3.webp"
-              name="Управление лицензирования и государственной аккредитации образовательной деятельности"
-              link=""
-            />
-          </div>
-        ) : (
-          <div className={styles.slider}>
-            <Swiper
-              slidesPerView={slides}
-              spaceBetween={30}
-              navigation={true}
-              modules={[Navigation]}
-              className={styles.Swiper}
-            >
-              <SwiperSlide>
-                <StructureCard
-                  img="/imgs/structure/1.webp"
-                  name="Управление профессионального образования, инновационной деятельности и науки"
-                  link=""
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <StructureCard
-                  img="/imgs/structure/2.webp"
-                  name="Управление инспектирования, аттестации и мониторинга системы образования"
-                  link=""
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <StructureCard
-                  img="/imgs/structure/3.webp"
-                  name="Управление лицензирования и государственной аккредитации образовательной деятельности"
-                  link=""
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        )}
         <h2>УПРАВЛЕНИЯ МИНИСТЕРСТВА ПРОСВЕЩЕНИЯ</h2>
         <div className={styles.slider}>
           <Swiper
@@ -133,13 +79,27 @@ export default function Structure() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <StructureCard img="" name="" link="" />
+              <StructureCard
+                img="/imgs/structure/1.webp"
+                name="Управление профессионального образования, инновационной деятельности и науки"
+                link=""
+              />
             </SwiperSlide>
+
             <SwiperSlide>
-              <StructureCard img="" name="" link="" />
+              <StructureCard
+                img="/imgs/structure/2.webp"
+                name="Управление инспектирования, аттестации и мониторинга системы образования"
+                link=""
+              />
             </SwiperSlide>
+
             <SwiperSlide>
-              <StructureCard img="" name="" link="" />
+              <StructureCard
+                img="/imgs/structure/3.webp"
+                name="Управление лицензирования и государственной аккредитации образовательной деятельности"
+                link=""
+              />
             </SwiperSlide>
             <SwiperSlide>
               <StructureCard img="" name="" link="" />

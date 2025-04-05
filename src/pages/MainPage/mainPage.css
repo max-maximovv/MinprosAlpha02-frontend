@@ -5,6 +5,15 @@
   border-radius: 2px !important;
   bottom: 30px !important;
 }
+.swiper-button-prev,
+.swiper-button-next {
+  color: #0f1d89 !important;
+  font-weight: 600;
+  background-color: white;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50%;
+}
 @media (max-width: 1380px) {
   #firstSlider .swiper-pagination-bullets {
     text-align: start;
@@ -42,4 +51,10 @@
   text-align: start;
   padding-left: 10px;
   padding-bottom: 20px;
+}
+#managementSlider {
+  height: calc(90vh - 50px);
+}
+#verticalSwiperManagements .swiper-slide {
+  width: 50% !important;
 }

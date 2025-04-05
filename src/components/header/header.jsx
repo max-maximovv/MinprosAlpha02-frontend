@@ -54,8 +54,8 @@ export default function Header() {
   }
   return (
     <>
-      {dimensions.width > 1150 ? (
-        <header className={scroll < 50 ? styles.scrollColor : styles.topColor}>
+      {dimensions.width > 800 ? (
+        <header className={styles.topColor}>
           <div className={styles.navbar}>
             <div className={styles.navbarHead}>
               <a href="/" className={styles.logotype}>
@@ -91,7 +91,12 @@ export default function Header() {
                 title="НОРМАТИВНЫЕ ПРАВОВЫЕ АКТЫ"
                 links={<DocumentationList />}
               />
-              <Dropdown title="УНО" links={<UNO />} />
+              <Button variant="text">
+                <Link to="/news" className="header-link">
+                  НОВОСТИ
+                </Link>
+              </Button>
+              {/**<Dropdown title="УНО" links={<UNO />} />
               <Dropdown
                 title="ГОСУДАРСТВЕННАЯ ГРАЖДАНСКАЯ СЛУЖБА"
                 links={<CivilService />}
@@ -116,7 +121,7 @@ export default function Header() {
                 >
                   МЕРЫ ПОДДЕРЖКИ ДЛЯ МОЛОДЕЖИ
                 </Link>
-              </Button>
+              </Button>**/}
             </div>
           </div>
         </header>

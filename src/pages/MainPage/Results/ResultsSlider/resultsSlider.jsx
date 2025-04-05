@@ -48,12 +48,12 @@ export default function ResultsSlider() {
                 <SwiperSlide>
                   <div className={styles.resultsSlide} id={resIndex}>
                     <div className={styles.resultsSlideTextContainer}>
-                      <h3>{resItm.attributes.SecondSliderTitle}</h3>
+                      <h2>{resItm.attributes.SecondSliderTitle}</h2>
                       <p>{resItm.attributes.SecondSliderText}</p>
                     </div>
                     <img
                       src={
-                        "http://192.168.100.12:1337" +
+                        databaseUrl +
                         resItm.attributes.SecondSliderImg.data[0].attributes.url
                       }
                       alt="resSlide"

@@ -12,11 +12,11 @@ function ResultsInfo() {
       }}
     >
       <img src="/imgs/логотип_минпрос-removebg-preview 1.svg" alt="logotype" />
-      <h3>
+      <h2>
         МИНИСТЕРСТВО ПРОСВЕЩЕНИЯ
         <br /> ПРИДНЕСТРОВСКОЙ
         <br /> МОЛДАВСКОЙ РЕСПУБЛИКИ
-      </h3>
+      </h2>
       <div className={styles.infoTextContainer}>
         <p>
           25 июля 2000 года принимается решение о слиянии всех органов и

@@ -32,7 +32,7 @@ export default function MainSlider() {
             clickable: true,
           }}
           autoplay={{
-            delay: 5000,
+            delay: 500000,
             disableOnInteraction: false,
           }}
           modules={[Autoplay, Pagination, Navigation]}
@@ -48,8 +48,12 @@ export default function MainSlider() {
                         <div className={styles.mainSlideTextContainer}>
                           <h2>ГЛАВНЫЕ НОВОСТИ</h2>
                           <div>
-                            <h3>{itm.attributes.MainSliderTitle}</h3>
-                            <p>{itm.attributes.MainSliderText}</p>
+                            <p className={styles.mainSlideTextContainerTitle}>
+                              {itm.attributes.MainSliderTitle}
+                            </p>
+                            <p className={styles.mainSlideTextContainerText}>
+                              {itm.attributes.MainSliderText}
+                            </p>
                           </div>
                         </div>
                       </div>
