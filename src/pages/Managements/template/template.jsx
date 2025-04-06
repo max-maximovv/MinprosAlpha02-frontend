@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 
-import { Grid, Navigation } from "swiper/modules";
+import { Grid, Navigation, Pagination, Autoplay } from "swiper/modules";
 import { databaseUrl } from "../../../config";
 import styles from "./template.module.css";
 import "./slide.css";
@@ -44,18 +44,6 @@ export default function ManageTemplate(props) {
       })
       .catch((error) => console.error("Ошибка загрузки данных:", error));
   }, []);
-  const SlideText = (data) => {
-    return (
-      <div className={styles.container}>
-        <div>
-          <p>{data.email}</p>
-          <p>{data.telephone}</p>
-        </div>
-
-        <p>{data.name}</p>
-      </div>
-    );
-  };
   const SlideVerticalSlider = (props) => {
     return (
       <a href={props.href}>
@@ -69,12 +57,46 @@ export default function ManageTemplate(props) {
   return (
     <div>
       <div className={styles.slider}>
-        <Swiper spaceBetween={10} slidesPerView={1} id="managementSlider">
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={1}
+          id="managementSlider"
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 5000,
+          }}
+          modules={[Pagination, Autoplay]}
+        >
           {images.map((url, index) => (
             <SwiperSlide key={index}>
               <div className={styles.slide}>
-                <SlideText />
-                <img src={url} alt={`slide-${index}`} />
+                <div className={styles.container}>
+                  <div className={styles.container_text}>
+                    <div>
+                      <img
+                        src="/imgs/icons/telephone.png"
+                        className={styles.telephone_img}
+                      />
+                      <p className={styles.slide_email}>{data.email}</p>
+                    </div>
+                    <div>
+                      <img
+                        src="/imgs/icons/email.png"
+                        className={styles.email_img}
+                      />
+                      <p className={styles.slide_telephone}>{data.telephone}</p>
+                    </div>
+                  </div>
+
+                  <p className={styles.slide_name}>{data.name}</p>
+                </div>
+                <img
+                  src={url}
+                  alt={`slide-${index}`}
+                  className={styles.slider_img}
+                />
               </div>
             </SwiperSlide>
           ))}

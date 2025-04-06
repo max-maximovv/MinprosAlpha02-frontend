@@ -52,27 +52,6 @@ export default function Structure() {
           >
             <SwiperSlide>
               <StructureCard
-                img="/imgs/structure/laws.webp"
-                name="Управление правового обеспечения и кадровой политики"
-                link=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <StructureCard
-                img="/imgs/structure/education-work.webp"
-                name="Управление воспитательной, идеологической работы и дополнительного образования"
-                link=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <StructureCard
-                img="/imgs/structure/youth-policy.webp"
-                name="Управление молодежной политики"
-                link=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <StructureCard
                 img="/imgs/structure/education.webp"
                 name="Управление общего образования"
                 link=""
@@ -80,35 +59,45 @@ export default function Structure() {
             </SwiperSlide>
             <SwiperSlide>
               <StructureCard
-                img="/imgs/structure/1.webp"
-                name="Управление профессионального образования, инновационной деятельности и науки"
+                img="/imgs/structure/youth-policy.webp"
+                name="Управление молодежной политики и дополнительного образования"
                 link=""
               />
             </SwiperSlide>
-
+            <SwiperSlide>
+              <StructureCard
+                img="/imgs/structure/1.webp"
+                name="Управление профессионального образования и науки"
+                link=""
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <StructureCard
+                img="/imgs/structure/laws.webp"
+                name="Управление государственного контроля и мониторинга системы образования"
+                link=""
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <StructureCard
+                img="/imgs/structure/education-work.webp"
+                name="Управление правового обеспечения и кадровой политики"
+                link=""
+              />
+            </SwiperSlide>
             <SwiperSlide>
               <StructureCard
                 img="/imgs/structure/2.webp"
-                name="Управление инспектирования, аттестации и мониторинга системы образования"
+                name=" Управление планирования, финансирования, исполнения бюджета и государственных закупок"
                 link=""
               />
             </SwiperSlide>
-
             <SwiperSlide>
               <StructureCard
                 img="/imgs/structure/3.webp"
-                name="Управление лицензирования и государственной аккредитации образовательной деятельности"
+                name="Управление информационно-документационного и архивного обеспечения"
                 link=""
               />
-            </SwiperSlide>
-            <SwiperSlide>
-              <StructureCard img="" name="" link="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <StructureCard img="" name="" link="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <StructureCard img="" name="" link="" />
             </SwiperSlide>
           </Swiper>
         </div>

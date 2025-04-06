@@ -25,7 +25,7 @@
   #firstSlider .swiper-pagination-bullets {
     text-align: start;
     max-width: 1340px;
-    padding-left: calc(((100vw - 1340px) / 2));
+    padding-left: 54px;
     padding-bottom: 20px;
   }
 }
@@ -52,9 +52,12 @@
   padding-left: 10px;
   padding-bottom: 20px;
 }
-#managementSlider {
-  height: calc(90vh - 50px);
-}
+
 #verticalSwiperManagements .swiper-slide {
   width: 50% !important;
+}
+#managementSlider .swiper-pagination-bullets {
+  text-align: start;
+  padding-left: 40px;
+  padding-bottom: 20px;
 }

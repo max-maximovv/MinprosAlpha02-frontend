@@ -10,7 +10,7 @@ export default function MapSection() {
         }}
       >
         <div className={styles.contactsContainer}>
-          <h3>КОНТАКТЫ</h3>
+          <h2>КОНТАКТЫ</h2>
           <p>
             <img src="" />
             Адрес Министерства
