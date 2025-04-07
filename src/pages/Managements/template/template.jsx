@@ -15,12 +15,7 @@ export default function ManageTemplate(props) {
   const [slides, setSlides] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `${databaseUrl}/api/managements?filters[id][$eq]=1
-      &populate[sliderImgs][fields]=url
-      &populate[activityImg][fields]=url
-      &populate[slides][populate]=image,text`
-    )
+    fetch(`${databaseUrl}${props.database}`)
       .then((res) => res.json())
       .then((data) => {
         if (!data.data || data.data.length === 0) return;
@@ -43,7 +38,7 @@ export default function ManageTemplate(props) {
         setSlides(slides);
       })
       .catch((error) => console.error("Ошибка загрузки данных:", error));
-  }, []);
+  }, [props.database]);
   const SlideVerticalSlider = (props) => {
     return (
       <a href={props.href}>
@@ -76,16 +71,19 @@ export default function ManageTemplate(props) {
                   <div className={styles.container_text}>
                     <div>
                       <img
-                        src="/imgs/icons/telephone.png"
-                        className={styles.telephone_img}
+                        src="/imgs/icons/email.png"
+                        className={styles.email_img}
+                        alt=""
                       />
                       <p className={styles.slide_email}>{data.email}</p>
                     </div>
                     <div>
                       <img
-                        src="/imgs/icons/email.png"
-                        className={styles.email_img}
+                        src="/imgs/icons/telephone.png"
+                        className={styles.telephone_img}
+                        alt=""
                       />
+
                       <p className={styles.slide_telephone}>{data.telephone}</p>
                     </div>
                   </div>
@@ -105,7 +103,7 @@ export default function ManageTemplate(props) {
       <div className={styles.verticalSlider}>
         <div className={styles.imgBlock}>
           <h3>Деятельность управления</h3>
-          <img src={databaseUrl + activityImg} />
+          <img src={databaseUrl + activityImg} alt="" />
         </div>
         <Swiper
           direction={"vertical"}

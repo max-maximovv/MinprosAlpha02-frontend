@@ -97,6 +97,9 @@
   font-size: 32px;
   margin: 0 20px 0 20px;
 }
+.verticalSwiper {
+  background-color: #0f1d89;
+}
 @media (max-width: 1500px) {
   .slide_name {
     font-size: 32px;

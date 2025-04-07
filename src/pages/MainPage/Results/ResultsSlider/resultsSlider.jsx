@@ -1,8 +1,6 @@
 import styles from "./resultsSlider.module.css";
 
-import { getData } from "../../../../hooks/fetchData";
-
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -15,14 +13,17 @@ import { databaseUrl } from "../../../../config";
 
 export default function ResultsSlider() {
   const [data, setData] = useState(null);
-
   useEffect(() => {
-    const myData = getData(
+    fetch(
       `${databaseUrl}/api/glavnaya-straniczas?fields[0]=SecondSliderTitle&fields[1]=SecondSliderText&populate[SecondSliderImg][fields][0]=name&populate[SecondSliderImg][fields][1]=url`
-    ).then((res) => {
-      let newData = res.data.slice(-6);
-      setData(newData);
-    });
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.data || data.data.length === 0) return;
+        let newData = data.data.slice(-6);
+        setData(newData);
+      })
+      .catch((error) => console.error("Ошибка загрузки данных:", error));
   }, []);
   return (
     <div className={styles.resultsSlider}>
@@ -34,7 +35,7 @@ export default function ResultsSlider() {
           clickable: true,
         }}
         autoplay={{
-          delay: 3500000,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination, Navigation]}
@@ -45,8 +46,8 @@ export default function ResultsSlider() {
           <ul>
             {data.map((resItm, resIndex) => {
               return (
-                <SwiperSlide>
-                  <div className={styles.resultsSlide} id={resIndex}>
+                <SwiperSlide key={resIndex}>
+                  <div className={styles.resultsSlide}>
                     <div className={styles.resultsSlideTextContainer}>
                       <h2>{resItm.attributes.SecondSliderTitle}</h2>
                       <p>{resItm.attributes.SecondSliderText}</p>
@@ -56,7 +57,7 @@ export default function ResultsSlider() {
                         databaseUrl +
                         resItm.attributes.SecondSliderImg.data[0].attributes.url
                       }
-                      alt="resSlide"
+                      alt=""
                     />
                   </div>
                 </SwiperSlide>

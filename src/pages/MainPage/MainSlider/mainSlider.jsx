@@ -1,7 +1,6 @@
 import styles from "./mainSlider.module.css";
-import { getData } from "../../../hooks/fetchData";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -14,25 +13,28 @@ export default function MainSlider() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    const myData = getData(
+    fetch(
       `${databaseUrl}/api/glavnaya-straniczas?fields[0]=MainSliderTitle&fields[1]=MainSliderText&populate[MainSliderImg][fields][0]=name&populate[MainSliderImg][fields][1]=url`
-    ).then((res) => {
-      let newData = res.data.slice(-6);
-      setData(newData);
-    });
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.data || data.data.length === 0) return;
+        let newData = data.data.slice(-6);
+        setData(newData);
+      })
+      .catch((error) => console.error("Ошибка загрузки данных:", error));
   }, []);
   return (
     <>
       <article className={styles.mainSlider} id="firstSlider">
         <Swiper
           slidesPerView={1}
-          spaceBetween={30}
           loop={true}
           pagination={{
             clickable: true,
           }}
           autoplay={{
-            delay: 500000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           modules={[Autoplay, Pagination, Navigation]}
@@ -42,8 +44,8 @@ export default function MainSlider() {
             <ul>
               {data.map((itm, index) => {
                 return (
-                  <SwiperSlide>
-                    <div className={styles.mainSlide} id={index}>
+                  <SwiperSlide key={index}>
+                    <div className={styles.mainSlide}>
                       <div className={styles.MainSliderContainer}>
                         <div className={styles.mainSlideTextContainer}>
                           <h2>ГЛАВНЫЕ НОВОСТИ</h2>

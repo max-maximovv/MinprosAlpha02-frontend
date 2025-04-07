@@ -47,7 +47,6 @@ export default function MainPageForm() {
         }) => (
           <form onSubmit={handleSubmit} className="support-form">
             <input
-              fullWidth
               variant="outlined"
               type="text"
               placeholder="Полное имя (Фамилия, имя, отчество полностью)"
@@ -61,7 +60,6 @@ export default function MainPageForm() {
             {console.log(errors.name)}
             <input
               error={errors.phone && true}
-              fullWidth
               variant="outlined"
               type="text"
               placeholder="Телефон"
@@ -75,7 +73,6 @@ export default function MainPageForm() {
               value={values.phone}
             />
             <input
-              fullWidth
               variant="outlined"
               type="text"
               placeholder="E-mail"
@@ -86,7 +83,6 @@ export default function MainPageForm() {
               error={errors.email && true}
             />
             <input
-              fullWidth
               variant="outlined"
               type="text"
               placeholder="Тема обращения"
@@ -97,7 +93,6 @@ export default function MainPageForm() {
               error={errors.theme && true}
             />
             <input
-              fullWidth
               variant="outlined"
               type="text"
               placeholder="Текст обращения"

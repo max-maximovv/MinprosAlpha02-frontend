@@ -1,11 +1,7 @@
 import "./App.css";
-import Footer from "./components/footer/footer";
-import Header from "./components/header/header";
-import { Route, Routes, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 import Structure from "./pages/Structure/structure/Structure";
 import MainPage from "./pages/MainPage/mainPage";
-import MobileHeader from "./components/header/mobileHeader/MobileHeader";
 import DefaultLayout from "./components/layouts/DefaultLayout";
 
 import DnestrovskUNO from "./pages/uno/dnestrovsk";
@@ -24,7 +20,13 @@ import Cyclogram from "./pages/Structure/cyclogram/Cyclogram";
 import Dnestrovsk from "./pages/Institutions/dnestrovsk";
 import Slobodzeya from "./pages/Institutions/slobodzeya";
 import MainInstsPage from "./pages/Institutions/mainPage/main";
-import ManageTemplate from "./pages/Managements/template/template";
+import Molodezh from "./pages/Managements/molodezh";
+import Uoo from "./pages/Managements/obshee-obrazovanie";
+import UPOiN from "./pages/Managements/prof-obrazovanie";
+import UIDiAO from "./pages/Managements/information";
+import UGKiMSO from "./pages/Managements/obrazovanie-control";
+import UPOiKP from "./pages/Managements/pravovoe-obespechenie";
+import UPFIBiGZ from "./pages/Managements/planirovanie";
 
 function App() {
   return (
@@ -58,7 +60,13 @@ function App() {
             </Route>
 
             <Route path="managements">
-              <Route path="template" element={<ManageTemplate />} />
+              <Route path="UMPiDO" element={<Molodezh />} />
+              <Route path="UOO" element={<Uoo />} />
+              <Route path="UPOiN" element={<UPOiN />} />
+              <Route path="UIDiAO" element={<UIDiAO />} />
+              <Route path="UGKiMSO" element={<UGKiMSO />} />
+              <Route path="UPOiKP" element={<UPOiKP />} />
+              <Route path="UPFIBiGZ" element={<UPFIBiGZ />} />
             </Route>
           </Route>
         </Routes>

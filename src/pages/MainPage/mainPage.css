@@ -14,6 +14,20 @@
   height: 60px !important;
   border-radius: 50%;
 }
+#verticalSwiperManagements .swiper-button-next {
+  left: 0 !important;
+  right: 0 !important;
+  top: var(--swiper-navigation-top-offset, 95%) !important;
+  justify-self: anchor-center;
+  rotate: 90deg;
+}
+#verticalSwiperManagements .swiper-button-prev {
+  left: 0;
+  right: 0;
+  top: var(--swiper-navigation-top-offset, 5%) !important;
+  justify-self: anchor-center;
+  rotate: 90deg;
+}
 @media (max-width: 1380px) {
   #firstSlider .swiper-pagination-bullets {
     text-align: start;
@@ -25,7 +39,7 @@
   #firstSlider .swiper-pagination-bullets {
     text-align: start;
     max-width: 1340px;
-    padding-left: 54px;
+    padding-left: calc((100vw - 1344px) / 2);
     padding-bottom: 20px;
   }
 }

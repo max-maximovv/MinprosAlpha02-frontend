@@ -51,7 +51,10 @@
 }
 @media (max-width: 1420px) {
   .links-container img {
-    width: 180px;
+    width: 150px;
+  }
+  .links-paragraph {
+    font-size: 44px;
   }
 }
 @media (max-width: 800px) {
@@ -59,10 +62,10 @@
     gap: 8px;
   }
   .links-container img {
-    width: 150px;
+    width: 120px;
   }
   .links-paragraph {
-    font-size: 44px;
+    font-size: 40px;
   }
 }
 @media (max-width: 520px) {
