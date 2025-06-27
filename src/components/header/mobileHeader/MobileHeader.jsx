@@ -14,14 +14,11 @@ export default function MobileHeader() {
       <header className={styles.MobileHeader}>
         <div className={styles.navbar}>
           <a href="/" className={styles.logotype}>
-            <img
-              src="/imgs/логотип_минпрос-removebg-preview 1.svg"
-              alt="logotype"
-            />
+            <img src="/imgs/logotypes/width_200.webp" alt="logotype" />
             <div className={styles.logoText}>
-              <p className={styles.logoH}>МИНИСТЕРСТВО ПРОСВЕЩЕНИЯ </p>
+              <p className={styles.logoH}>Министерство просвещения </p>
               <p className={styles.logoHM}>
-                ПРИДНЕСТРОВСКОЙ МОЛДАВСКОЙ РЕСПУБЛИКИ
+                Приднестровской Молдавской Республики
               </p>
             </div>
           </a>

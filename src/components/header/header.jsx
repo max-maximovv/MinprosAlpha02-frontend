@@ -54,19 +54,16 @@ export default function Header() {
   }
   return (
     <>
-      {dimensions.width > 800 ? (
+      {dimensions.width > 1240 ? (
         <header className={styles.topColor}>
           <div className={styles.navbar}>
             <div className={styles.navbarHead}>
               <a href="/" className={styles.logotype}>
-                <img
-                  src="/imgs/логотип_минпрос-removebg-preview 1.svg"
-                  alt="logotype"
-                />
+                <img src="/imgs/logotypes/width_200.webp" alt="logotype" />
                 <div className={styles.logoText}>
-                  <p className={styles.logoH}>МИНИСТЕРСТВО ПРОСВЕЩЕНИЯ </p>
+                  <p className={styles.logoH}>Министерство просвещения </p>
                   <p className={styles.logoHM}>
-                    ПРИДНЕСТРОВСКОЙ МОЛДАВСКОЙ РЕСПУБЛИКИ
+                    Приднестровской Молдавской Республики
                   </p>
                 </div>
               </a>
@@ -84,19 +81,21 @@ export default function Header() {
             </div>
 
             <div className={styles.bar}>
-              <Dropdown title="О МИНИСТЕРСТВЕ" links={<AboutList />} />
-              <Dropdown title="ДЕЯТЕЛЬНОСТЬ" links={<Activity />} />
-              <Dropdown title="СИСТЕМА ОБРАЗОВАНИЯ" links={<Education />} />
+              <Dropdown title="О министерстве" links={<AboutList />} />
+              <Dropdown title="Деятельность" links={<Activity />} />
+              <Dropdown title="Система образования" links={<Education />} />
               <Dropdown
-                title="НОРМАТИВНЫЕ ПРАВОВЫЕ АКТЫ"
+                title="Нормативные правовые акты"
                 links={<DocumentationList />}
               />
+              <Dropdown title="УНО" links={<UNO />} />
               <Button variant="text">
                 <Link to="/news" className="header-link">
-                  НОВОСТИ
+                  Новости
                 </Link>
               </Button>
-              {/**<Dropdown title="УНО" links={<UNO />} />
+
+              {/**
               <Dropdown
                 title="ГОСУДАРСТВЕННАЯ ГРАЖДАНСКАЯ СЛУЖБА"
                 links={<CivilService />}

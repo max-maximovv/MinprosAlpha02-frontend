@@ -133,21 +133,45 @@ export default function InstTemplate(props) {
               </div>
             </div>
             <hr />
-            <div className={styles.contactsInformation}>
-              <p>Приёмная</p>
-              <div>
-                <img
-                  src="/imgs/icons/location-gray.png"
-                  className={styles.address}
-                />
-                <p>{data[0].attributes.address}</p>
+            <div className={styles.contactsSection}>
+              <div className={styles.contactsInformation}>
+                <p>Приёмная</p>
+                <div>
+                  <img
+                    src="/imgs/icons/location-gray.png"
+                    className={styles.address}
+                  />
+                  <p>{data[0].attributes.address}</p>
+                </div>
+                <div>
+                  <img
+                    src="/imgs/icons/telephone-gray.png"
+                    className={styles.telephone}
+                  />
+                  <p>{data[0].attributes.supervisorTelephone}</p>
+                </div>
               </div>
-              <div>
-                <img
-                  src="/imgs/icons/telephone-gray.png"
-                  className={styles.telephone}
-                />
-                <p>{data[0].attributes.supervisorTelephone}</p>
+              <div className={styles.supervision}>
+                <div className={styles.supervisionBlock}>
+                  <p>Руководство</p>
+                  <h2>{data[0].attributes.supervisor}</h2>
+                  <div className={styles.contactsInformation}>
+                    <div>
+                      <img
+                        src="/imgs/icons/location-gray.png"
+                        className={styles.address}
+                      />
+                      <p>{data[0].attributes.address}</p>
+                    </div>
+                    <div>
+                      <img
+                        src="/imgs/icons/telephone-gray.png"
+                        className={styles.telephone}
+                      />
+                      <p>{data[0].attributes.supervisorTelephone}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -158,40 +182,6 @@ export default function InstTemplate(props) {
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>
             {data[0].attributes.About}
           </ReactMarkdown>
-        </div>
-        <div className={styles.supervision}>
-          <div className={styles.supervisionBlock}>
-            <h3>РУКОВОДСТВО</h3>
-            <h2>
-              {data[0].attributes.supervisor}
-              <br />
-              Директор
-            </h2>
-            <div className={styles.contactsInformation}>
-              <div>
-                <img
-                  src="/imgs/icons/location-gray.png"
-                  className={styles.address}
-                />
-                <p>{data[0].attributes.address}</p>
-              </div>
-              <div>
-                <img
-                  src="/imgs/icons/telephone-gray.png"
-                  className={styles.telephone}
-                />
-                <p>{data[0].attributes.supervisorTelephone}</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.supervisionImg}>
-            <img
-              src={
-                databaseUrl +
-                data[0].attributes.SupervisorImg.data[0].attributes.url
-              }
-            />
-          </div>
         </div>
       </div>
     </div>

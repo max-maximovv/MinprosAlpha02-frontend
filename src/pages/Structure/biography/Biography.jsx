@@ -70,35 +70,41 @@ export default function Biography() {
   };
   return (
     <div className={styles.biography}>
-      <div className={styles.image}></div>
-      <div className={styles.biographyText}>
-        <div className={styles.head}>
-          <h2>БИОГРАФИЯ МИНИСТРА</h2>
-          <h3>СВЕТЛАНА НИКОЛАЕВНА ИВАНИШИНА</h3>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <ImageUnit
-              text="12 августа 1960 год"
-              img="/imgs/structure/icons8-birth-date-50.png"
-            />
-            <ImageUnit
-              text="пгт. Вапнярка, Винницкая область, УССР, семья служащих."
-              img="/imgs/icons/address.png"
-            />
-          </div>
-        </div>
-        <div className={styles.content}>
-          <ContentUnit title="Образование" text={<EducationText />} />
-          <ContentUnit title="Трудовая деятельность" text={<WorkText />} />
-          <ContentUnit
-            title="Государственные и ведомственные награды"
-            text={<AwardsText />}
+      <div className={styles.head}>
+        <h2>БИОГРАФИЯ МИНИСТРА</h2>
+        <h3>СВЕТЛАНА НИКОЛАЕВНА ИВАНИШИНА</h3>
+        <img
+          className={styles.biographyImg}
+          src="/imgs/structure/avatar.webp"
+        />
+        <div className={styles.biographyText}>
+          <ImageUnit
+            text="12 августа 1960 год"
+            img="/imgs/structure/icons8-birth-date-50.png"
           />
+          <ImageUnit
+            text="пгт. Вапнярка, Винницкая область, УССР, семья служащих."
+            img="/imgs/icons/address.png"
+          />
+        </div>
+      </div>
+      <div className={styles.content}>
+        <ContentUnit title="Образование" text={<EducationText />} />
+        <ContentUnit title="Трудовая деятельность" text={<WorkText />} />
+        <ContentUnit
+          title="Государственные и ведомственные награды"
+          text={<AwardsText />}
+        />
+
+        <div className={styles.contacts}>
+          <p>
+            <img src="/imgs/icons/phone.webp" />
+            (533) 2-22-29
+          </p>
+          <p>
+            <img src="/imgs/icons/email-black.webp" />
+            minpros@minpros.gospmr.org
+          </p>
         </div>
       </div>
     </div>

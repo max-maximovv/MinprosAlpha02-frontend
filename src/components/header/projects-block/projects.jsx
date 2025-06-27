@@ -1,4 +1,5 @@
 import styles from "./projects.module.css";
+import { databaseUrl } from "../../../config";
 
 import { getData } from "../../../hooks/fetchData";
 import { useEffect, useState } from "react";
@@ -20,11 +21,11 @@ export default function ProjectsBlock(props) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    const myData = getData(
-      "http://192.168.100.12:1337/api/management-projects"
-    ).then((res) => {
-      setData(res.data);
-    });
+    const myData = getData(`${databaseUrl}/api/management-projects`).then(
+      (res) => {
+        setData(res.data);
+      }
+    );
   }, []);
   return (
     <div className={styles.manageProjects}>

@@ -9,17 +9,28 @@ header {
   left: 0;
   right: 0;
 }
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .topColor {
   background-color: #0f1d89;
 }
 .navbarHead {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin: 10px 0 5px 0;
 }
 .navbar {
-  width: 1440px;
+  width: 1344px;
   height: 100%;
+  padding: 0 5px 0 5px;
+  opacity: 0;
+  animation: ani 1.5s forwards;
 }
 .bar {
   width: 100%;
@@ -38,30 +49,28 @@ header {
 .logotype {
   color: white;
   display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding-left: 5px;
+  gap: 5px;
 }
 .logotype img {
-  width: 14%;
+  width: 85px;
 }
 .logoText {
-  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .logoH {
-  font-size: 18px;
-  margin-bottom: 5px;
-  margin-top: 8px;
+  font-size: 20px;
+  margin: 0;
 }
 .logoHM {
-  margin-top: 0;
+  margin: 0;
   font-size: 14px;
 }
 .headerItems {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding-right: 5px;
 }
 .headerItems img {
   width: 100%;

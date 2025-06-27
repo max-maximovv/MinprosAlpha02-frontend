@@ -1,18 +1,15 @@
 .biography {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: auto;
-  display: flex;
   background-image: url(../../../../public/imgs/structure/management-background.jpg);
   object-fit: cover;
   background-repeat: no-repeat;
 }
-.image {
-  width: 45%;
-  object-fit: cover;
-  background-image: url(../../../../public/imgs/structure/avatar.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+.biographyImg {
+  width: 400px;
 }
 .head {
   text-align: center;
@@ -24,10 +21,12 @@
 .head h2 {
   margin-bottom: 0;
 }
+.content {
+  max-width: 1344px;
+  padding: 0 20px 40px 20px;
+}
 .biographyText {
-  width: 55%;
-  height: 100%;
-  padding: 12px;
+  padding: 0 20px 0 20px;
 }
 .title {
   font-size: 22px;
@@ -58,7 +57,50 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 .imageCircle img {
-  width: 60%;
+  width: 30px;
+}
+.contacts {
+  display: flex;
+  gap: 30px;
+  align-self: flex-start;
+}
+.contacts p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+}
+.contacts img {
+  width: 30px;
+}
+@media (max-width: 500px) {
+  .contacts {
+    display: block;
+  }
+}
+@media (max-width: 450px) {
+  .biographyImg {
+    width: 75%;
+  }
+  .imageCircle {
+    width: 40px;
+    height: 40px;
+  }
+  .imageCircle img {
+    width: 20px;
+  }
+  .imageUnit p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 350px) {
+  .content {
+    padding: 0 10px 20px 10px;
+  }
+  .contacts p {
+    font-size: 16px;
+  }
 }

@@ -2,13 +2,12 @@
   background-image: url("/public/imgs/backgrounds/bg-white.png");
   background-size: cover;
   width: 100%;
-  min-height: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .contacts img {
-  width: 300px;
+  width: 250px;
   height: auto;
   margin-top: 0;
 }
@@ -20,7 +19,7 @@
   font-size: 62px;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 0;
+  margin: 20px 0 0 0;
 }
 .contacts-item p {
   font-size: 42px;
@@ -30,9 +29,6 @@
 }
 
 @media (max-width: 920px) {
-  .contacts {
-    min-height: 280px;
-  }
   .contacts img {
     width: 200px;
   }
@@ -41,9 +37,6 @@
   }
 }
 @media (max-width: 620px) {
-  .contacts {
-    min-height: 220px;
-  }
   .contacts-title {
     font-size: 42px;
   }
@@ -55,9 +48,6 @@
   }
 }
 @media (max-width: 380px) {
-  .contacts {
-    min-height: 180px;
-  }
   .contacts-title {
     font-size: 32px;
   }
@@ -69,9 +59,6 @@
   }
 }
 @media (max-width: 300px) {
-  .contacts {
-    min-height: 160px;
-  }
   .contacts-title {
     font-size: 30px;
   }
