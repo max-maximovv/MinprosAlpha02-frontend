@@ -43,29 +43,29 @@ export const DrawerList = () => {
         </ListItem>
       </List>
       <Divider />
-      <Dropdown title="О МИНИСТЕРСТВЕ" links={<AboutList />} />
-      <Dropdown title="ДЕЯТЕЛЬНОСТЬ" links={<Activity />} />
-      <Dropdown title="СИСТЕМА ОБРАЗОВАНИЯ" links={<Education />} />
+      <Dropdown title="О Министерстве" links={<AboutList />} />
+      <Dropdown title="Деятельность" links={<Activity />} />
+      <Dropdown title="Система образования" links={<Education />} />
       <Dropdown
-        title="НОРМАТИВНЫЕ ПРАВОВЫЕ АКТЫ"
+        title="Нормативные правовые акты"
         links={<DocumentationList />}
       />
-      <Dropdown title="УНО" links={<UNO />} />
+      <Dropdown title="Управление народного образования" links={<UNO />} />
       <Dropdown
-        title="ГОСУДАРСТВЕННАЯ ГРАЖДАНСКАЯ СЛУЖБА"
+        title="Государственная гражданская служба"
         links={<CivilService />}
       />
-      <Dropdown title="ОБРАЩЕНИЯ ГРАЖДАН" links={<CivilAppeals />} />
+      <Dropdown title="Обращения граждан" links={<CivilAppeals />} />
       <Button variant="text">
         <Link
           to="https://minpros.gospmr.org/about/10620"
           className="header-link"
         >
-          ПРОЕКТЫ ДЛЯ ОБЩЕСТВЕННОГО ОБСУЖДЕНИЯ
+          Проекты для общественного обсуждения
         </Link>
       </Button>
       <Dropdown
-        title="КОНТРОЛЬНАЯ (НАДЗОРНАЯ) ДЕЯТЕЛЬНОСТЬ"
+        title="Контрольная (надзорная) деятельность"
         links={<ControlActivity />}
       />
       <Button variant="text">
@@ -73,7 +73,7 @@ export const DrawerList = () => {
           to="https://minpros.gospmr.org/about/12023"
           className="header-link"
         >
-          ОБЩЕСТВЕННЫЙ СОВЕТ
+          Общественный совет
         </Link>
       </Button>
       <Button variant="text">
@@ -81,7 +81,7 @@ export const DrawerList = () => {
           to="https://minpros.gospmr.org/about/11655"
           className="header-link"
         >
-          ПРОТИВОДЕЙСТВИЕ КОРРУПЦИИ
+          Противодействие коррупции
         </Link>
       </Button>
       <Button variant="text">
@@ -89,7 +89,7 @@ export const DrawerList = () => {
           to="https://umpminpros.wixsite.com/mery-podderjki"
           className="header-link"
         >
-          МЕРЫ ПОДДЕРЖКИ ДЛЯ МОЛОДЕЖИ
+          Меры поддержки для молодёжи
         </Link>
       </Button>
       <Button variant="text">
@@ -97,7 +97,7 @@ export const DrawerList = () => {
           to="https://minpros.gospmr.org/about/12351"
           className="header-link"
         >
-          ОБЩЕСТВЕННЫЙ РЕСПУБЛИКАНСКИЙ СТУДЕНЧЕСКИЙ СОВЕТ
+          Общественный республиканский студенческий совет
         </Link>
       </Button>
       <Button variant="text">
@@ -105,7 +105,7 @@ export const DrawerList = () => {
           to="https://minpros.gospmr.org/about/12765"
           className="header-link"
         >
-          ДИАЛОГ НА РАВНЫХ
+          Диалог на равных
         </Link>
       </Button>
     </Box>

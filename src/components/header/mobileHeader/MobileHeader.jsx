@@ -26,23 +26,17 @@ export default function MobileHeader() {
             {/**<a>
                 <img src="/imgs/search.svg" alt="search" />
               </a>**/}
-            <div>
-              <MenuIcon
-                sx={{ height: "50px", width: "auto", color: "#fff" }}
-                onClick={() => {
-                  setOpen(true);
-                }}
-              />
-              <Drawer
-                open={open}
-                onClose={() => {
-                  setOpen(false);
-                }}
-                anchor={"right"}
-                className={styles.drawer}
-              >
-                <DrawerList />
-              </Drawer>
+            <div className={styles.hamburgerMenu}>
+              <input id={styles.menu__toggle} type="checkbox" />
+              <label className={styles.menu__btn} for={styles.menu__toggle}>
+                <span></span>
+              </label>
+
+              <ul className={styles.menu__box}>
+                <div className={styles.menu__scroll}>
+                  <DrawerList />
+                </div>
+              </ul>
             </div>
           </div>
         </div>

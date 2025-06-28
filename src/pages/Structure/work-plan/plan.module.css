@@ -1,0 +1,80 @@
+.title {
+  font-weight: 800;
+  font-size: 30px;
+  color: rgb(51, 51, 51);
+  border-bottom: 4px solid rgb(51, 51, 51);
+  height: 100px;
+  width: 60%;
+}
+.container {
+  padding: 30px 40px 30px 40px;
+  min-height: 800px;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filterButtons button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid #1e3a8a;
+  background: white;
+  cursor: pointer;
+}
+
+.filterButtons .active {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.plansList .planCard {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+}
+
+.planCard a {
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+.planCard .date {
+  font-size: 14px;
+  color: #555;
+}
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #1e3a8a;
+  background: white;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #1e3a8a;
+  color: white;
+}
+.date {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.date p {
+  font-size: 16px;
+}
+.date img {
+  width: 30px;
+}

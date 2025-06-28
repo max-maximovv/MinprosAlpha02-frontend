@@ -24,13 +24,13 @@ export const AboutList = () => {
         <Link to="/about/structure">Структура</Link>
       </MenuItem>
       <MenuItem onClick={handleClose}>
-        <Link to="/about/plan">Циклограмма работы министерства</Link>
+        <Link to="/about/cyclogram">Циклограмма работы министерства</Link>
       </MenuItem>
       <MenuItem onClick={handleClose}>
         <Link to="/institutions/main">Подведомственные организации</Link>
       </MenuItem>
       <MenuItem onClick={handleClose}>
-        <Link to="https://minpros.gospmr.org/about/9849">План работы</Link>
+        <Link to="/about/plan">План работы</Link>
       </MenuItem>
       <MenuItem onClick={handleClose}>
         <a href="/#history">История министерства</a>

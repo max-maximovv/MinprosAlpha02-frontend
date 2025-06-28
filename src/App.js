@@ -27,6 +27,7 @@ import UIDiAO from "./pages/Managements/information";
 import UGKiMSO from "./pages/Managements/obrazovanie-control";
 import UPOiKP from "./pages/Managements/pravovoe-obespechenie";
 import UPFIBiGZ from "./pages/Managements/planirovanie";
+import WorkPlan from "./pages/Structure/work-plan/plan";
 
 function App() {
   return (
@@ -39,7 +40,8 @@ function App() {
               <Route path="structure" element={<Structure />} />
               <Route path="management" element={<Management />} />
               <Route path="biography" element={<Biography />} />
-              <Route path="plan" element={<Cyclogram />} />
+              <Route path="cyclogram" element={<Cyclogram />} />
+              <Route path="plan" element={<WorkPlan />} />
             </Route>
 
             <Route path="uno">

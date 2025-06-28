@@ -29,11 +29,11 @@
 }
 .day {
   font-size: 42px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   margin-bottom: 0;
 }
 .infoBlock span {
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: red;
 }
 .infoBlock ul {

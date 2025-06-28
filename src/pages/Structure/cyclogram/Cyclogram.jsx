@@ -80,7 +80,7 @@ export default function Cyclogram() {
   const CalendarBlock = () => {
     return (
       <div className={styles.calendar}>
-        <h2>ЦИКЛОГРАММА РАБОТЫ МИНИСТЕРСТВА</h2>
+        <h2>Циклограмма работы министерства</h2>
         <div className={styles.calendarContainer}>
           <Calendar
             showNeighboringMonth={false}
