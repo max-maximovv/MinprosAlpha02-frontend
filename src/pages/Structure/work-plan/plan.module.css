@@ -29,7 +29,9 @@
   background-color: #1e3a8a;
   color: white;
 }
-
+.plansList {
+  min-height: 610px;
+}
 .plansList .planCard {
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
@@ -37,8 +39,11 @@
   justify-content: space-between;
   height: 40px;
   align-items: center;
+  transition: 0.1s;
 }
-
+.plansList .planCard:hover {
+  padding: 12px 2px;
+}
 .planCard a {
   font-weight: 500;
   color: #000;
@@ -77,4 +82,13 @@
 }
 .date img {
   width: 30px;
+}
+
+@media (max-width: 950px) {
+  .plansList .planCard {
+    padding: 40px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }

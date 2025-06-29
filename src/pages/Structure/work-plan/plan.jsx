@@ -11,22 +11,42 @@ function WorkPlan() {
   const [page, setPage] = useState(1);
   const [pageCount, setPageCount] = useState(1);
 
-  const pageSize = 10; // Сколько записей на страницу
+  const pageSize = 10;
 
   useEffect(() => {
-    axios
-      .get(`${databaseUrl}/api/plans`, {
-        params: {
-          populate: "file",
-          pagination: { page, pageSize },
+    const params = {
+      populate: "file",
+      pagination: { page, pageSize },
+      sort: ["publishedDate:desc"],
+    };
+
+    const currentYear = new Date().getFullYear();
+
+    if (filter === "архив") {
+      params.filters = {
+        publishedDate: {
+          $lt: `${currentYear}-01-01`,
         },
-      })
+      };
+    }
+
+    if (filter === "год") {
+      params.filters = {
+        publishedDate: {
+          $gte: `${currentYear}-01-01`,
+          $lte: `${currentYear}-12-31`,
+        },
+      };
+    }
+
+    axios
+      .get(`${databaseUrl}/api/plans`, { params })
       .then((res) => {
         setPlans(res.data.data);
         setPageCount(res.data.meta.pagination.pageCount);
       })
       .catch((err) => console.error(err));
-  }, [page]);
+  }, [page, filter]);
 
   const now = new Date();
 
@@ -41,10 +61,7 @@ function WorkPlan() {
     return "архив";
   };
 
-  const filteredPlans = plans.filter((plan) => {
-    const category = getCategory(plan.attributes.publishedDate);
-    return filter === "все" || category === filter;
-  });
+  const filteredPlans = plans;
 
   return (
     <div className={styles.container}>
@@ -89,7 +106,7 @@ function WorkPlan() {
               <div className={styles.date}>
                 <p>{dateText}</p>
                 <a href={`${databaseUrl}${fileUrl}`} download>
-                  <img src="\imgs\icons\icons8-скачать-50.png" />
+                  <img src="\imgs\icons\icons8-скачать-50.png" alt="download" />
                 </a>
               </div>
             </div>

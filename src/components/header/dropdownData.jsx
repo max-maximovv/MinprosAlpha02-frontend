@@ -33,7 +33,7 @@ export const AboutList = () => {
         <Link to="/about/plan">План работы</Link>
       </MenuItem>
       <MenuItem onClick={handleClose}>
-        <a href="/#history">История министерства</a>
+        <a href="/about/history">История министерства</a>
       </MenuItem>
       <MenuItem onClick={ReloadPage}>
         <a href="/#form">Обращения граждан</a>

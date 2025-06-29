@@ -28,6 +28,7 @@ import UGKiMSO from "./pages/Managements/obrazovanie-control";
 import UPOiKP from "./pages/Managements/pravovoe-obespechenie";
 import UPFIBiGZ from "./pages/Managements/planirovanie";
 import WorkPlan from "./pages/Structure/work-plan/plan";
+import History from "./pages/Structure/history-page/history";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
               <Route path="biography" element={<Biography />} />
               <Route path="cyclogram" element={<Cyclogram />} />
               <Route path="plan" element={<WorkPlan />} />
+              <Route path="history" element={<History />} />
             </Route>
 
             <Route path="uno">
